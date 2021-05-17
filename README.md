@@ -29,9 +29,17 @@ IoT Project that contains a line following robot based of an esp-32
 
 ### Photos
 
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0068.jpeg" alt="Image of Setup" width="50"/>
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Image of Setup" width="50"/>
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0070.jpeg" alt="Image of Setup" width="200"/>
+<div class="row">
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0068.jpeg" alt="Snow" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Forest" style="width:100%">
+  </div>
+  <div class="column">
+    <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0067.jpeg" alt="Mountains" style="width:100%">
+  </div>
+</div>
 
 ### Futere advencements
 
