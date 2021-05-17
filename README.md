@@ -37,7 +37,7 @@ IoT Project that contains a line following robot based of an esp-32
     <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Forest" style="width:100%">
   </div>
   <div class="column">
-    <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0067.jpeg" alt="Mountains" style="width:100%">
+    <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0070.jpeg" alt="Mountains" style="width:100%">
   </div>
 </div>
 
