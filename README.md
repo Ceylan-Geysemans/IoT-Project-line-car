@@ -23,9 +23,11 @@ IoT Project that contains a line following robot based of an esp-32
 * leds
 * battery holder
 
-![Schematic](https://github.com/Ceylan-Geysemans/eSPA32/blob/3a0101a3ef078409ee8424af2678e16c6660d90c/images/Screen%20Shot%202021-03-30%20at%2016.30.32.png)
-
+![Schematic](https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/Screen%20Shot%202021-05-17%20at%2021.12.24.png)
+s
 <img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0068.jpeg" alt="Image of Setup" width="200"/>
+<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Image of Setup" width="200"/>
+<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0070.jpeg" alt="Image of Setup" width="200"/>
 
 ### Futere advencements
 
