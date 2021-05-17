@@ -25,9 +25,9 @@ IoT Project that contains a line following robot based of an esp-32
 
 ![Schematic](https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/Screen%20Shot%202021-05-17%20at%2021.12.24.png)
 
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0068.jpeg" alt="Image of Setup" width="230"/>
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Image of Setup" width="230"/>
-<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0070.jpeg" alt="Image of Setup" width="230"/>
+<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0068.jpeg" alt="Image of Setup" width="220"/>
+<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0069.jpeg" alt="Image of Setup" width="220"/>
+<img src="https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/IMG_0070.jpeg" alt="Image of Setup" width="220"/>
 
 ### Futere advencements
 
