@@ -1,3 +1,20 @@
+#include <WiFi.h>
+#include <PubSubClient.h>
+
+#define wifi_ssid "ceylan"         //wifi ssid
+#define wifi_password "admin123"     //wifi password
+
+#define mqtt_server "192.168.0.101"  // server name or IP
+#define mqtt_user "mqtt"      // username
+#define mqtt_password "admin123"   // password
+
+//mqtt topics
+#define topic_A "topic/groen"
+#define topic_B "topic/rood"
+#define topic_C "topic/geel"
+#define topic_D "topic/blauw"
+
+
 #define groen 25
 #define rood 33
 #define geel 32
@@ -31,8 +48,20 @@ int left_sensor_state;
 int right_sensor_state;
 int stopper = true;
 
+WiFiClient espClient;
+PubSubClient client(espClient);
+
 void setup() {
   Serial.begin(115200);
+
+  //setup_wifi();                           //Connect to Wifi network
+
+  client.setServer(mqtt_server, 1883);    // Configure MQTT connection, change port if needed.
+
+  if (!client.connected()) {
+    //reconnect();
+  }
+
   pinMode(irl, INPUT);
   pinMode(irr, INPUT);
   pinMode(en1, OUTPUT);
@@ -85,6 +114,14 @@ void loop() {
       digitalWrite(geel, LOW);
       digitalWrite(blauw, LOW);
 
+      client.publish(topic_A, String(HIGH).c_str(), true);
+      delay(100);
+      client.publish(topic_B, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_C, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_D, String(LOW).c_str(), true);
+
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, HIGH);
 
@@ -101,6 +138,14 @@ void loop() {
       digitalWrite(geel, LOW);
       digitalWrite(blauw, LOW);
 
+      client.publish(topic_A, String(HIGH).c_str(), true);
+      delay(100);
+      client.publish(topic_B, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_C, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_D, String(LOW).c_str(), true);
+
       digitalWrite(motor1pin1, HIGH);
       digitalWrite(motor1pin2, LOW);
 
@@ -116,6 +161,14 @@ void loop() {
       digitalWrite(rood, LOW);
       digitalWrite(geel, LOW);
       digitalWrite(blauw, HIGH);
+
+      client.publish(topic_A, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_B, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_C, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_D, String(HIGH).c_str(), true);
 
       digitalWrite(motor1pin1, LOW);
       digitalWrite(motor1pin2, LOW);
@@ -147,6 +200,14 @@ void loop() {
     digitalWrite(geel, HIGH);
     digitalWrite(blauw, LOW);
 
+    client.publish(topic_A, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_B, String(LOW).c_str(), true);
+      delay(100);
+      client.publish(topic_C, String(HIGH).c_str(), true);
+      delay(100);
+      client.publish(topic_D, String(LOW).c_str(), true);
+
     digitalWrite(motor1pin1, LOW);
     digitalWrite(motor1pin2, LOW);
 
@@ -166,4 +227,39 @@ long data() {
 
 void advance() {
   stopper = true;
+}
+
+void setup_wifi() {
+  delay(20);
+  Serial.println();
+  Serial.print("Connecting to ");
+  Serial.println(wifi_ssid);
+
+  WiFi.begin(wifi_ssid, wifi_password);
+
+  while (WiFi.status() != WL_CONNECTED) {
+    delay(100);
+    Serial.print(".");
+  }
+
+  Serial.println("");
+  Serial.println("WiFi is OK ");
+  Serial.print("=> ESP32 new IP address is: ");
+  Serial.print(WiFi.localIP());
+  Serial.println("");
+}
+
+void reconnect() {
+
+  while (!client.connected()) {
+    Serial.print("Connecting to MQTT broker ...");
+    if (client.connect("ESP32Client", mqtt_user, mqtt_password)) {
+      Serial.println("OK");
+    } else {
+      Serial.print("[Error] Not connected: ");
+      Serial.print(client.state());
+      Serial.println("Wait 5 seconds before retry.");
+      delay(5000);
+    }
+  }
 }
