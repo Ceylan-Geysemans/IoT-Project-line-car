@@ -41,6 +41,8 @@ IoT Project that contains a line following robot based of an esp-32
   </div>
 </div>
 
-### Futere advencements
+### MQTT control via node red
 
-* Central control system via computer and/or smartphone
+
+![Node red](https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/mqtt%20dashboard.PNG)
+![Node red](https://raw.githubusercontent.com/Ceylan-Geysemans/IoT-Project-line-car/main/Images/mqtt_node%20red.PNG)
